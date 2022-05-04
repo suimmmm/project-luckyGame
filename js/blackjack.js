@@ -1,8 +1,10 @@
 const costomerDeck = document.getElementById('costomer-deck');
+const computerDeck = document.getElementById('computer-deck');
 const btnHit = document.getElementById('hit');
 const btnStay = document.getElementById('stay');
+const btnStart = document.getElementById('start');
 let shape = ['c','s','d','h'] // 카드 모양
-let numder = ['A','2','3','4','5','6','7','8','9','10','J','Q','K']; // 카드 숫자
+let numder = ['a','2','3','4','5','6','7','8','9','10','j','q','k']; // 카드 숫자
 let deck = new Array(); // 카드 모양*숫자
 let costomer = []; // 내 덱
 let computer = []; // 컴퓨터 덱
@@ -20,10 +22,10 @@ function creative(){
   for(let i=0; i < shape.length; i++){
     for(let j=0; j < numder.length; j++){
       let count = parseInt(numder[j]);
-      if(numder[j] === 'J' || numder[j] === 'Q' || numder[j] === 'K'){
+      if(numder[j] === 'j' || numder[j] === 'q' || numder[j] === 'k'){
         count = 10;
       }
-      if(numder[j] === 'A'){
+      if(numder[j] === 'a'){
         count = 1;
       }
       // console.log(count);
@@ -56,8 +58,9 @@ function shuffle(deck){
 // 섞은 카드 나눠주기
 computer = shuffle(deck);
 costomer = shuffle(deck);
-console.log(computer);
-console.log(costomer);
+console.dir(computer);
+console.dir(costomer);
+// console.log(computer[0].numder);
 
 // 카드 추가
 
@@ -92,3 +95,23 @@ btnStay.addEventListener('click',()=>{
   // total 계산 
   // 결과 송출
 })
+
+// start 누를때
+btnStart.addEventListener('click',()=>{
+  creative();
+  shuffle(deck);
+  computer = shuffle(deck);
+  costomer = shuffle(deck);
+
+  costomerDeck.children[0].style.backgroundImage = `url('/img/card-${costomer[0].shape}-${costomer[0].numder}.jpg')`;
+  costomerDeck.children[1].style.backgroundImage = `url('/img/card-${costomer[1].shape}-${costomer[1].numder}.jpg')`;
+
+  computerDeck.children[0].style.backgroundImage = `url('/img/card-${computer[0].shape}-${computer[0].numder}.jpg')`;
+  computerDeck.children[1].style.backgroundImage = `url('/img/card-${computer[1].shape}-${computer[1].numder}.jpg')`;
+})
+
+// 카드 이미지 지정
+costomerDeck.children[0].style.backgroundImage = `url('/img/card-${costomer[0].shape}-${costomer[0].numder}.jpg')`;
+costomerDeck.children[1].style.backgroundImage = `url('/img/card-${costomer[1].shape}-${costomer[1].numder}.jpg')`;
+computerDeck.children[0].style.backgroundImage = `url('/img/card-${computer[0].shape}-${computer[0].numder}.jpg')`;
+computerDeck.children[1].style.backgroundImage = `url('/img/card-${computer[1].shape}-${computer[1].numder}.jpg')`;

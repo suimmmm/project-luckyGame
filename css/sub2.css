@@ -65,13 +65,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 50px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 #table-box #btn-box button {
@@ -85,4 +86,5 @@
   border: 1px solid var(--color-g);
   -webkit-box-shadow: 3px 2px 3px var(--color-g);
           box-shadow: 3px 2px 3px var(--color-g);
+  margin: 10px 0;
 }

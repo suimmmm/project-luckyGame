@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-a: #FFC4D6 ;
+  --color-b: #E2AFFF;
+  --color-b-a: #F2DBFF;
+  --color-c: #B388EB;
+  --color-d: #90E0EF;
+  --color-e: #80FFDB;
+  --color-f: #F6F6F6;
+  --color-g: #102742;
+}

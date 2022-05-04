@@ -1,4 +1,7 @@
-let shape = ['클로버','스페이드','다이아몬드','하트'] // 카드 모양
+const costomerDeck = document.getElementById('costomer-deck');
+const btnHit = document.getElementById('hit');
+const btnStay = document.getElementById('stay');
+let shape = ['c','s','d','h'] // 카드 모양
 let numder = ['A','2','3','4','5','6','7','8','9','10','J','Q','K']; // 카드 숫자
 let deck = new Array(); // 카드 모양*숫자
 let costomer = []; // 내 덱
@@ -72,3 +75,20 @@ function getTotal(hand){
 
 console.log(computerTotal);
 console.log(costomerTotal);
+
+// hit 누를때
+btnHit.addEventListener('click',()=>{
+  // console.log('l');
+  let td_card = document.createElement('td');
+  // td_card.style.backgroundImage = `url(/img/card-${}.jpg)`
+  costomerDeck.append(td_card);
+
+  // 만약 내가 21 넘으면 졌다고 떠야함
+  // 컴퓨터는 17
+})
+
+// stay 누를때
+btnStay.addEventListener('click',()=>{
+  // total 계산 
+  // 결과 송출
+})

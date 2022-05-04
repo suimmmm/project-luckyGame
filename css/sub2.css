@@ -1,0 +1,88 @@
+#table-box {
+  width: 100vw;
+  height: 100vh;
+}
+
+#table-box #table {
+  margin: 0 auto;
+  width: 400px;
+  height: 500px;
+  background-color: var(--color-b-a);
+  border-radius: 10px;
+}
+
+#table-box #table tbody {
+  margin: 0 auto;
+  width: 400px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#table-box #table tbody > tr {
+  width: 100%;
+  height: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#table-box #table tbody > tr > td {
+  width: 66px;
+  height: 88px;
+  background-image: url("/img/card-back.jpg");
+  background-size: contain;
+  text-align: center;
+  line-height: 50px;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+#table-box #table tbody > tr:nth-child(2) {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#table-box #btn-box {
+  width: 400px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+#table-box #btn-box button {
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  font-size: 20px;
+  letter-spacing: 4px;
+  background-color: #fff;
+  border: 1px solid var(--color-g);
+  -webkit-box-shadow: 3px 2px 3px var(--color-g);
+          box-shadow: 3px 2px 3px var(--color-g);
+}

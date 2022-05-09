@@ -28,6 +28,22 @@ function card(numder, shape, count){
 // computerDeck.children[0].style.backgroundImage = `url('/img/card-${computer[0].shape}-${computer[0].numder}.jpg')`;
 // computerDeck.children[1].style.backgroundImage = `url('/img/card-${computer[1].shape}-${computer[1].numder}.jpg')`;
 
+function start(){
+  shuffle(deck);
+  computer = shuffle(deck);
+  costomer = shuffle(deck);
+  
+  // 카드 갯수 리셋
+  countCard = 52;
+  backCount.textContent = countCard;
+  
+  costomerDeck.children[0].style.backgroundImage = `url('/img/card-${costomer[0].shape}-${costomer[0].numder}.jpg')`;
+  costomerDeck.children[1].style.backgroundImage = `url('/img/card-${costomer[1].shape}-${costomer[1].numder}.jpg')`;
+  
+  computerDeck.children[0].style.backgroundImage = `url('/img/card-${computer[0].shape}-${computer[0].numder}.jpg')`;
+  computerDeck.children[1].style.backgroundImage = `url('/img/card-${computer[1].shape}-${computer[1].numder}.jpg')`;
+}
+
 function end(){
   // costomerDeck.children[0].style.backgroundImage = `url('/img/card-back.jpg')`;
   // costomerDeck.children[1].style.backgroundImage = `url('/img/card-back.jpg')`;
@@ -76,8 +92,8 @@ function shuffle(deck){
 }
 
 // 섞은 카드 나눠주기
-computer = shuffle(deck);
-costomer = shuffle(deck);
+// computer = shuffle(deck);
+// costomer = shuffle(deck);
 // console.dir(computer);
 // console.dir(costomer);
 // console.log(computer[0].numder);
@@ -114,8 +130,6 @@ function cardDel(){
       // classOpen[value].remove();
       console.log(value);
 
-      // 집가서 할래 ㅠㅠ 너무 피곤해
-      
       // classOpen[value].
       value++;
     }
@@ -127,8 +141,8 @@ function cardDel(){
 }
 
 // 총점 계산
-let computerTotal = getTotal(computer);
-let costomerTotal = getTotal(costomer);
+// let computerTotal = getTotal(computer);
+// let costomerTotal = getTotal(costomer);
 
 function getTotal(hand){
   let total = 0;
@@ -142,6 +156,7 @@ function getTotal(hand){
 // hit 누를때
 let hitCilck = 0;
 btnHit.addEventListener('click',()=>{
+  // if()
   if(hitCilck < 3){
     cardAdd();
   }
@@ -194,20 +209,3 @@ btnStart.addEventListener('click',()=>{
   cardDel();
   start();
 })
-
-function start(){
-  shuffle(deck);
-  computer = shuffle(deck);
-  costomer = shuffle(deck);
-  
-  // 카드 갯수 리셋
-  countCard = 52;
-  backCount.textContent = countCard;
-  
-  costomerDeck.children[0].style.backgroundImage = `url('/img/card-${costomer[0].shape}-${costomer[0].numder}.jpg')`;
-  costomerDeck.children[1].style.backgroundImage = `url('/img/card-${costomer[1].shape}-${costomer[1].numder}.jpg')`;
-  
-  computerDeck.children[0].style.backgroundImage = `url('/img/card-${computer[0].shape}-${computer[0].numder}.jpg')`;
-  computerDeck.children[1].style.backgroundImage = `url('/img/card-${computer[1].shape}-${computer[1].numder}.jpg')`;
-}
-

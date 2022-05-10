@@ -1,15 +1,86 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 500;
 }
 
 :root {
-  --color-a: #FFC4D6 ;
-  --color-b: #E2AFFF;
-  --color-b-a: #F2DBFF;
-  --color-c: #B388EB;
-  --color-d: #90E0EF;
-  --color-e: #80FFDB;
-  --color-f: #F6F6F6;
+  --color-a: #B6D982 ;
+  --color-b: #7AC23C;
+  --color-c: #5A8F2C;
+  --color-d: #D9816C;
+  --color-d-a: #98AAD9;
+  --color-e: #06423A;
+  --color-f: #F2F2F2;
   --color-g: #102742;
+}
+
+.m {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.m > section {
+  margin: 20px 0;
+  width: 90%;
+}
+
+#top {
+  border: 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#top > #empty {
+  width: 40px;
+  height: 40px;
+}
+
+#top > #logo-box {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#top > #logo-box #logo {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-c);
+  margin: 0 10px;
+}
+
+#top > #hamburger-box {
+  width: 40px;
+  height: 40px;
+  background-color: var(--color-a);
 }

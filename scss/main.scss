@@ -1,0 +1,38 @@
+#bg{
+  width: 100% !important;
+  height: 100vh;
+  position: absolute;
+  background-image: url('/img/main-1-2.gif');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+#icon-box{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+
+  > div{
+    width: 100px;
+    height: 100px;
+  }
+  #logo{
+    background-color: var(--color-c);
+  }
+  #menu-box{
+    width: 100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    > #item{
+      width: 80px;
+      height: 80px;
+      background-color: var(--color-c);
+    }
+  }
+}
+

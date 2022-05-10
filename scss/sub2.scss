@@ -1,12 +1,10 @@
 #table-box{
-  width: 100vw;
-  height: 100vh;
 
   #table{
     margin: 0 auto;
     width: 400px;
     height: 500px;
-    background-color: #102742;
+    background-color: var(--color-g);
     border-radius: 10px;
     
     tbody{
@@ -58,9 +56,9 @@
       border: none;
       font-size: 20px;
       letter-spacing: 4px;
-      background-color: #fff;
-      border: 1px solid #102742;
-      box-shadow: 3px 2px 3px #102742;
+      background-color: var(--color-f);
+      border: 1px solid var(--color-g);
+      box-shadow: 3px 2px 3px var(--color-g);
       margin: 10px 0;
     }
   }

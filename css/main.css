@@ -1,0 +1,53 @@
+#bg {
+  width: 100% !important;
+  height: 100vh;
+  position: absolute;
+  background-image: url("/img/main-1-2.gif");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+#icon-box {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+#icon-box > div {
+  width: 100px;
+  height: 100px;
+}
+
+#icon-box #logo {
+  background-color: var(--color-c);
+}
+
+#icon-box #menu-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#icon-box #menu-box > #item {
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-c);
+}

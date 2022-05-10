@@ -1,11 +1,66 @@
-*{margin: 0;padding: 0;}
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ul, li{
+  list-style: none;
+  text-decoration: none;
+}
+h1{
+  font-size: 24px;
+  font-weight: 500;
+}
 :root{
-  // --color-a : #FFC4D6 ;
-  // --color-b : #E2AFFF;
-  // --color-b-a : #F2DBFF;
-  // --color-c : #B388EB;
-  // --color-d : #90E0EF;
-  // --color-e : #80FFDB;
-  // --color-f : #F6F6F6;
+  --color-a : #B6D982 ;
+  --color-b : #7AC23C;
+  --color-c: #5A8F2C;
+  --color-d : #D9816C;
+  --color-d-a : #98AAD9;
+  --color-e : #06423A;
+  --color-f : #F2F2F2;
   --color-g : #102742;
+}
+
+// 모바일 버전
+.m{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.m > section{
+  margin: 20px 0;
+  width: 90%;
+}
+
+// 모바일 top 메뉴 로고
+#top{
+  border: 1px solid;
+  display: flex;
+  justify-content: space-between;
+
+  > #empty{
+    width: 40px;
+    height: 40px;
+  }
+
+  > #logo-box{
+    height: 40px;
+    display: flex;
+
+    #logo{
+      width: 40px;
+      height: 40px;
+      background-color: var(--color-c);
+      margin: 0 10px;
+    }
+  }
+
+  > #hamburger-box{
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-a);
+  }
 }

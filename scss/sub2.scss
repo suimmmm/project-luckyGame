@@ -4,7 +4,7 @@
     margin: 0 auto;
     width: 400px;
     height: 500px;
-    background-color: var(--color-g);
+    background-color: var(--color-c);
     border-radius: 10px;
     
     tbody{
@@ -39,27 +39,30 @@
       }
     }
   }
+}
 
-  #btn-box{
-    width: 400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 40px;
-    
-    button{
-      width: 150px;
-      height: 50px;
-      border-radius: 20px;
-      border: none;
-      font-size: 20px;
-      letter-spacing: 4px;
-      background-color: var(--color-f);
-      border: 1px solid var(--color-g);
-      box-shadow: 3px 2px 3px var(--color-g);
-      margin: 10px 0;
-    }
+#btn-box{
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  
+  button{
+    width: 40%;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    letter-spacing: 4px;
+    background-color: var(--color-f);
+    border: 1px solid var(--color-g);
+    box-shadow: 3px 2px 3px var(--color-g);
+    margin: 10px 0;
   }
+}
+
+#total{
+  border: 1px solid;
+  height: 100px;
 }

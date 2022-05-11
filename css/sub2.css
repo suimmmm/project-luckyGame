@@ -2,7 +2,7 @@
   margin: 0 auto;
   width: 400px;
   height: 500px;
-  background-color: var(--color-g);
+  background-color: var(--color-c);
   border-radius: 10px;
 }
 
@@ -54,9 +54,8 @@
           justify-content: flex-end;
 }
 
-#table-box #btn-box {
+#btn-box {
   width: 400px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,11 +66,10 @@
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin-top: 40px;
 }
 
-#table-box #btn-box button {
-  width: 150px;
+#btn-box button {
+  width: 40%;
   height: 50px;
   border-radius: 20px;
   border: none;
@@ -82,4 +80,9 @@
   -webkit-box-shadow: 3px 2px 3px var(--color-g);
           box-shadow: 3px 2px 3px var(--color-g);
   margin: 10px 0;
+}
+
+#total {
+  border: 1px solid;
+  height: 100px;
 }

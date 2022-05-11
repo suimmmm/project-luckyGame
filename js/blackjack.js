@@ -12,7 +12,7 @@ let costomer = []; // 나
 let computer = []; // 컴퓨터
 let cos_td_card; // 나 카드 추가
 let com_td_card; // 컴퓨터 카드 추가
-let countCard = 52;
+let countCard = 48;
 
 backCount.textContent = `${countCard}`;
 
@@ -21,6 +21,9 @@ function card(numder, shape, count){
   this.shape = shape;
   this.count = count;
 }
+
+creative();
+start();
 
 // 카드 이미지 지정
 // costomerDeck.children[0].style.backgroundImage = `url('/img/card-${costomer[0].shape}-${costomer[0].numder}.jpg')`;
@@ -33,9 +36,7 @@ function start(){
   computer = shuffle(deck);
   costomer = shuffle(deck);
   
-  // 카드 갯수 리셋
-  countCard = 52;
-  backCount.textContent = countCard;
+
   
   costomerDeck.children[0].style.backgroundImage = `url('/img/card-${costomer[0].shape}-${costomer[0].numder}.jpg')`;
   costomerDeck.children[1].style.backgroundImage = `url('/img/card-${costomer[1].shape}-${costomer[1].numder}.jpg')`;
@@ -43,15 +44,6 @@ function start(){
   computerDeck.children[0].style.backgroundImage = `url('/img/card-${computer[0].shape}-${computer[0].numder}.jpg')`;
   computerDeck.children[1].style.backgroundImage = `url('/img/card-${computer[1].shape}-${computer[1].numder}.jpg')`;
 }
-
-function end(){
-  // costomerDeck.children[0].style.backgroundImage = `url('/img/card-back.jpg')`;
-  // costomerDeck.children[1].style.backgroundImage = `url('/img/card-back.jpg')`;
-  
-  // computerDeck.children[0].style.backgroundImage = `url('/img/card-back.jpg')`;
-  // computerDeck.children[1].style.backgroundImage = `url('/img/card-back.jpg')`;
-}
-creative();
 
 // 카드 만들기
 function creative(){
@@ -62,7 +54,7 @@ function creative(){
         count = 10;
       }
       if(numder[j] === 'a'){
-        count = 1;
+        count = 1 || 10;
       }
       // console.log(count);
       let newCard = new card(numder[j],shape[i],count);
@@ -94,11 +86,6 @@ function shuffle(deck){
 // 섞은 카드 나눠주기
 // computer = shuffle(deck);
 // costomer = shuffle(deck);
-// console.dir(computer);
-// console.dir(costomer);
-// console.log(computer[0].numder);
-console.log(computer);
-console.log(costomer);
 
 
 // 카드 추가
@@ -107,8 +94,8 @@ function cardAdd() {
   com_td_card = document.createElement('td');
   cos_td_card.classList.add('open');
   com_td_card.classList.add('open');
-  computerDeck.append(com_td_card);
-  costomerDeck.append(cos_td_card);
+  computerDeck.appendChild(com_td_card);
+  costomerDeck.appendChild(cos_td_card);
 
   let cosCardAdd = shuffle(deck).pop();
   let comCardAdd = shuffle(deck).pop();
@@ -121,23 +108,16 @@ function cardAdd() {
 
 // 카드 지우기
 function cardDel(){
-  let classOpen = document.getElementsByClassName('open');
+  let classOpen = document.querySelectorAll('.open');
   console.log(classOpen);
-  
-  let value = 0;
-  let fade = setInterval(function(){
-    if(value <= hitCilck){
-      // classOpen[value].remove();
-      console.log(value);
-
-      // classOpen[value].
-      value++;
+  if(costomerDeck.hasChildNodes){
+    console.log('?')
+    for(let i = 0; i< hitCilck; i++){
+      computerDeck.removeChild(computerDeck.lastChild);
+      costomerDeck.removeChild(costomerDeck.lastChild);
     }
-    else if(value > hitCilck){
-      console.log(value);
-      clearInterval(fade);
-    }
-  },100);
+    hitCilck = 0;
+  }
 }
 
 // 총점 계산
@@ -157,7 +137,7 @@ function getTotal(hand){
 let hitCilck = 0;
 btnHit.addEventListener('click',()=>{
   // if()
-  if(hitCilck < 3){
+  if(computerDeck.children.length < 5){
     cardAdd();
   }
   hitCilck ++;
@@ -173,26 +153,12 @@ btnHit.addEventListener('click',()=>{
   }
   
   // 카드 갯수 --
-  for(let t=0;t<hitCilck; t++){
-    countCard -= 2;
+  countCard = countCard - 2;
+  backCount.textContent = countCard;
+  if(countCard < 0){
+    countCard = 0;
     backCount.textContent = countCard;
-  }
-  
-  // 카드 추가까지 총점 계산
-  computerTotal = getTotal(computer);
-  costomerTotal = getTotal(costomer);
-  console.log(computerTotal);
-  console.log(costomerTotal);
-  // 만약 내가 21 넘으면 졌다고 떠야함
-  if(costomerTotal > 21){
-    console.log('너 짐');
-    end();
-  }
-  // 컴퓨터는 17
-  if(computerTotal > 21){
-    console.log('컴퓨터가 짐');
-    end();
-  }
+}
   return hitCilck;
 });
 
@@ -200,12 +166,30 @@ btnHit.addEventListener('click',()=>{
 btnStay.addEventListener('click',()=>{
   // total 계산 
   // 결과 송출
-  cardDel();
-  end();
+  // 카드 추가까지 총점 계산
+  let computerTotal = getTotal(computer);
+  let costomerTotal = getTotal(costomer);
+  console.log(computerTotal);
+  console.log(costomerTotal);
+  // 만약 내가 21 넘으면 졌다고 떠야함
+  if(costomerTotal > 21){
+    console.log('너 짐');
+  }
+  // 컴퓨터는 17
+  if(computerTotal > 21){
+    console.log('컴퓨터가 짐');
+  }
+  txtTotal.textContent = `
+  computer의 점수 ${computerTotal}
+  나의 점수 ${costomerTotal}
+  `;
 })
 
 // start 누를때
 btnStart.addEventListener('click',()=>{
   cardDel();
+  // 카드 갯수 리셋
+  countCard = 48;
+  backCount.textContent = countCard;
   start();
 })

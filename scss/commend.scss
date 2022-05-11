@@ -4,9 +4,23 @@ ul, li{
   text-decoration: none;
 }
 h1{
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
+  line-height: 40px;
 }
+
+h4{
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+p{
+  font-size: 0.9rem;
+  line-height: 20px;
+}
+
 :root{
   --color-a : #B6D982 ;
   --color-b : #7AC23C;
@@ -26,7 +40,7 @@ h1{
   display: flex;
 
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 

@@ -11,8 +11,21 @@ ul, li {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 500;
+  line-height: 40px;
+}
+
+h4 {
+  height: 40px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+p {
+  font-size: 0.9rem;
+  line-height: 20px;
 }
 
 :root {
@@ -37,9 +50,8 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

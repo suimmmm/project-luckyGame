@@ -13,6 +13,13 @@ let computer = []; // 컴퓨터
 let cos_td_card; // 나 카드 추가
 let com_td_card; // 컴퓨터 카드 추가
 let countCard = 48;
+let result = '';
+let comTxt = document.createElement('p');
+let cosTxt = document.createElement('p');
+let resultTxt = document.createElement('p');
+txtTotal.appendChild(comTxt);
+txtTotal.appendChild(cosTxt);
+txtTotal.appendChild(resultTxt);
 
 backCount.textContent = `${countCard}`;
 
@@ -37,7 +44,6 @@ function start(){
   costomer = shuffle(deck);
   
 
-  
   costomerDeck.children[0].style.backgroundImage = `url('/img/card-${costomer[0].shape}-${costomer[0].numder}.jpg')`;
   costomerDeck.children[1].style.backgroundImage = `url('/img/card-${costomer[1].shape}-${costomer[1].numder}.jpg')`;
   
@@ -172,17 +178,21 @@ btnStay.addEventListener('click',()=>{
   console.log(computerTotal);
   console.log(costomerTotal);
   // 만약 내가 21 넘으면 졌다고 떠야함
-  if(costomerTotal > 21){
-    console.log('너 짐');
+  if(costomerTotal <= 21 && costomerTotal > computerTotal){
+    console.log('너 이김');
+    result = '내가 이김'
   }
   // 컴퓨터는 17
-  if(computerTotal > 21){
-    console.log('컴퓨터가 짐');
+  else if(computerTotal <= 21 && computerTotal > costomerTotal){
+    console.log('컴퓨터가 이김');
+    result = '컴퓨터 이김'
   }
-  txtTotal.textContent = `
-  computer의 점수 ${computerTotal}
-  나의 점수 ${costomerTotal}
-  `;
+  else{
+    result = '다 짐'
+  }
+  comTxt.innerText = `컴퓨터 점수 -> ${computerTotal}`;
+  cosTxt.innerText = `내 점수 -> ${costomerTotal}`;
+  resultTxt.innerText = `결과 => ${result}`;
 })
 
 // start 누를때
@@ -191,5 +201,8 @@ btnStart.addEventListener('click',()=>{
   // 카드 갯수 리셋
   countCard = 48;
   backCount.textContent = countCard;
+  comTxt.innerText = '';
+  cosTxt.innerText = '';
+  resultTxt.innerText = '';
   start();
 })

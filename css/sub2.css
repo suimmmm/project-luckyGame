@@ -54,37 +54,8 @@
           justify-content: flex-end;
 }
 
-#btn-box {
-  width: 450px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-#btn-box button {
-  width: 40%;
-  height: 50px;
-  border-radius: 20px;
-  border: none;
-  font-size: 20px;
-  letter-spacing: 4px;
-  background-color: var(--color-f);
-  border: 1px solid var(--color-g);
-  -webkit-box-shadow: 3px 2px 3px var(--color-g);
-          box-shadow: 3px 2px 3px var(--color-g);
-  margin: 10px 0;
-}
-
 #total {
   border: 1px solid;
   width: 450px;
-  height: 100px;
   padding: 10px;
 }

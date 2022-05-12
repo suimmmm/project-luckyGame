@@ -1,0 +1,23 @@
+#slot-machine {
+  width: 375px;
+  height: 500px;
+  background-image: url('/img/slot-2.gif');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #item-box{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    #items{
+      font-size: 3rem;
+      width: 60px;
+      height: 60px;
+      background-image: url('/img/f.gif');
+      background-size: cover;
+    }
+  }
+}

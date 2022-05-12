@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BlackJack</title>
   <link rel="stylesheet" href="./css/commend.css">
-  <link rel="stylesheet" href="./css/sub2.css">
   <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/sub1.css">
+  <title>slot-machine</title>
 </head>
 <body>
   <div id="root" class="m">
@@ -19,31 +19,19 @@
       </div>
       <div id="hamburger-box"></div>
     </section>
-    <section id="table-box">
-      <table id="table">
-        <tbody>
-          <tr id="computer-deck">
-            <td></td>
-            <td></td>
-          </tr>
-          <tr id="back-count">
-            <td>count</td>
-          </tr>
-          <tr id="costomer-deck">
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+    <section id="slot-machine">
+      <div id="item-box">
+        <div id="items"></div>
+        <div id="items"></div>
+        <div id="items"></div>
+      </div>
     </section>
     <section id="btn-box">
       <div id="btn">
-        <button id="hit">HIT</button>
-        <button id="stay">STAY</button>
-        <button id="start">START</button>
+        <button id="shuffle">Shuffle</button>
+        <button id="stop">Stop</button>
       </div>
     </section>
-    <section id="total"></section>
     <div id="menu-box">
       <div id="box">
         <div id="bg"></div>
@@ -58,8 +46,7 @@
       </div>
     </div>
   </div>
-
-  <script src="./js/blackjack.js"></script>
+  
   <script src="./js/menu.js"></script>
 </body>
 </html>

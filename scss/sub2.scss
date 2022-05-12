@@ -41,30 +41,8 @@
   }
 }
 
-#btn-box{
-  width: 450px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  
-  button{
-    width: 40%;
-    height: 50px;
-    border-radius: 20px;
-    border: none;
-    font-size: 20px;
-    letter-spacing: 4px;
-    background-color: var(--color-f);
-    border: 1px solid var(--color-g);
-    box-shadow: 3px 2px 3px var(--color-g);
-    margin: 10px 0;
-  }
-}
-
 #total{
   border: 1px solid;
   width: 450px;
-  height: 100px;
   padding: 10px;
 }

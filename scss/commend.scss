@@ -72,3 +72,27 @@ p{
     background-color: var(--color-a);
   }
 }
+
+// 버튼
+#btn-box{
+  #btn{
+    width: 450px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  button{
+    width: 40%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    letter-spacing: 4px;
+    background-color: var(--color-b);
+    color: var(--color-f);
+    margin: 10px 0;
+  }
+  
+}

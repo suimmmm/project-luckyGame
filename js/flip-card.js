@@ -1,0 +1,1 @@
+let slotArray = ['a','b','c','d','e','f','g'];

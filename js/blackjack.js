@@ -30,7 +30,6 @@ function card(numder, shape, count){
 }
 
 creative();
-start();
 
 // 카드 이미지 지정
 // costomerDeck.children[0].style.backgroundImage = `url('/img/card-${costomer[0].shape}-${costomer[0].numder}.jpg')`;
@@ -178,12 +177,11 @@ btnStay.addEventListener('click',()=>{
   console.log(computerTotal);
   console.log(costomerTotal);
   // 만약 내가 21 넘으면 졌다고 떠야함
-  if(costomerTotal <= 21 && costomerTotal > computerTotal){
+  if(costomerTotal < 22 && costomerTotal > computerTotal){
     console.log('너 이김');
     result = '내가 이김'
   }
-  // 컴퓨터는 17
-  else if(computerTotal <= 21 && computerTotal > costomerTotal){
+  else if(computerTotal < 22 && costomerTotal < computerTotal){
     console.log('컴퓨터가 이김');
     result = '컴퓨터 이김'
   }

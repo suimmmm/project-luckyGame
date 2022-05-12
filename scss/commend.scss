@@ -37,21 +37,15 @@ p{
   width: 100vw;
   height: 100vh;
   position: relative;
-  display: flex;
-
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .m > section{
-  margin: 20px 0;
+  margin: 40px auto;
   width: 90%;
 }
 
 // 모바일 top 메뉴 로고
 #top{
-  border: 1px solid;
   display: flex;
   justify-content: space-between;
 

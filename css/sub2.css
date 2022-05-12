@@ -55,7 +55,7 @@
 }
 
 #btn-box {
-  width: 400px;
+  width: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -84,5 +84,7 @@
 
 #total {
   border: 1px solid;
+  width: 450px;
   height: 100px;
+  padding: 10px;
 }

@@ -39,7 +39,7 @@ p {
   --color-g: #102742;
 }
 
-.m {
+#root {
   width: 100vw;
   height: 100vh;
   position: relative;

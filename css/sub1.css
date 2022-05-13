@@ -1,10 +1,15 @@
-#slot-machine {
-  width: 375px;
+#flip-card-box #flip-card {
+  margin: 0 auto;
+  width: 400px;
   height: 500px;
-  background-image: url("/img/slot-2.gif");
+  background-color: var(--color-c);
+  border-radius: 10px;
+  padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -13,22 +18,45 @@
           align-items: center;
 }
 
-#slot-machine #item-box {
-  width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#flip-card-box #flip-card #items {
+  width: 70px;
+  height: 70px;
+  margin: 0 10px;
+  border: 1px solid;
 }
 
-#slot-machine #item-box #items {
-  font-size: 3rem;
-  width: 60px;
-  height: 60px;
-  background-image: url("/img/f.gif");
+#flip-card-box #flip-card #items #card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: 5s;
+          transform: 5s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  text-align: center;
+}
+
+#flip-card-box #flip-card #items #card-inner > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#flip-card-box #flip-card #items #card-inner #front {
+  background-color: var(--color-a);
+}
+
+#flip-card-box #flip-card #items #card-inner #back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
   background-size: cover;
+}
+
+#flip-card-box #flip-card #items.flip > #card-inner {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }

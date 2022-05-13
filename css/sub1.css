@@ -22,19 +22,14 @@
   width: 70px;
   height: 70px;
   margin: 0 10px;
-  border: 1px solid;
 }
 
 #flip-card-box #flip-card #items #card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  -webkit-transform: 5s;
-          transform: 5s;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
   text-align: center;
 }
 
@@ -48,6 +43,7 @@
 
 #flip-card-box #flip-card #items #card-inner #front {
   background-color: var(--color-a);
+  z-index: 1;
 }
 
 #flip-card-box #flip-card #items #card-inner #back {

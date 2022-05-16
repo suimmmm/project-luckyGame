@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/d00def0550.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./css/commend.css">
   <link rel="stylesheet" href="./css/menu.css">
   <link rel="stylesheet" href="./css/sub3.css">
   <title>lotto</title>
 </head>
 <body>
-  <div id="root" class="m">
+  <div id="root" class="m" style="overflow:hidden ;">
     <section id="top">
       <div id="empty"></div>
       <div id="logo-box">
@@ -19,14 +20,42 @@
       </div>
       <div id="hamburger-box"></div>
     </section>
-    <section id="lotto-box"></section>
+    <section id="lotto-box">
+      <div id="lotto">
+        <div id="capsule-box">
+          <div id="capsule" style="background-image: url('/img/capsule-1.gif');"></div>
+          <div id="capsule" style="background-image: url('/img/capsule-2.gif');"></div>
+          <div id="capsule" style="background-image: url('/img/capsule-3.gif');"></div>
+          <div id="capsule" style="background-image: url('/img/capsule-4.gif');"></div>
+          <div id="capsule" style="background-image: url('/img/capsule-5.gif');"></div>
+        </div>
+      </div>
+    </section>
     <section id="btn-box">
       <div id="btn">
         <button id="shuffle">Shuffle</button>
         <button id="stop">Stop</button>
       </div>
     </section>
-    <div id="result-box"></div>
+    <div id="result-box">
+      <div id="result">
+        <div id="bg"></div>
+        <div id="box">
+          <div id="close-box">
+            <i class="fa-solid fa-x fa-2x"></i>
+          </div>
+          <div id="num-box">
+            <div id="num" style="background-color:var(--color-a)"></div>
+            <div id="num" style="background-color:var(--color-b)"></div>
+            <div id="num" style="background-color:var(--color-d)"></div>
+            <div id="num" style="background-color:var(--color-g)"></div>
+            <div id="num" style="background-color:var(--color-d-a)"></div>
+            <div id="num" style="background-color:var(--color-e)"></div>
+          </div>
+          <h4>당첨번호</h4>
+        </div>
+      </div>
+    </div>
     <div id="menu-box">
       <div id="box">
         <div id="bg"></div>

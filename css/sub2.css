@@ -53,9 +53,3 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-
-#total {
-  border: 1px solid;
-  width: 450px;
-  padding: 10px;
-}

@@ -110,3 +110,9 @@ p {
   color: var(--color-f);
   margin: 10px 0;
 }
+
+#total {
+  border: 1px solid;
+  width: 450px;
+  padding: 10px;
+}

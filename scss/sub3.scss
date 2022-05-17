@@ -52,7 +52,7 @@
     left: 50%;
   }
   50%{
-    top: 20%;
+    top: 40%;
     left: 10%;
   }
   75%{
@@ -96,12 +96,12 @@
     left: 60%;
   }
   50%{
-    top: 10%;
+    top: 70%;
     left: 60%;
   }
   75%{
-    top: 30%;
-    left: 50%;
+    top: 80%;
+    left: 30%;
   }
   100%{
     top: 60%;
@@ -123,11 +123,13 @@
       position: relative;
 
       >div{
-        width: 50px;
-        height: 50px;
+        width: 65px;
+        height: 65px;
         background-size: cover;
 
         position: absolute;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
       }
       >div:nth-child(1){
         animation-name: capsule-a;

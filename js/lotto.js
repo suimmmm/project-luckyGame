@@ -9,30 +9,21 @@ let lottoArray =[];
 
 function numPush(){
   for(let i=0; i<10; i++){
-    let count =Math.floor(Math.random() * 45) + 1;
-    if(lottoArray.indexOf(count) === -1){
-      if(lottoArray.length === 5){
+    lottoArray.sort(function(a,b){return a -b});
+    if(lottoArray.length < 5){
+      let count =Math.floor(Math.random() * 45) + 1;
+      if(lottoArray.indexOf(count) === -1){
         lottoArray.push(count);
       }
     }
-    lottoArray.sort();
-    let plus = Math.floor(Math.random() *45) +1;
+  }
+  let plus = Math.floor(Math.random() *45) +1;
+  if(lottoArray.indexOf(plus) === -1){
     lottoArray.push(plus);
   }
-  // console.log(lottoArray)
   console.log(lottoArray);
 }
 
-function count() {
-  let count =parseInt(Math.floor(Math.random() * 45) + 1);
-  if(lottoArray.indexOf(count) === -1){
-    lottoArray.push(count);
-  }
-}
-
-// capsuleVaule[0].style.animationDuration = '2s';
-
-numPush();
 console.log(lottoArray)
 function numValuetxt(){
   for(let i =0; i <lottoArray.length; i++){
@@ -43,7 +34,7 @@ function numValuetxt(){
 shuffleBtn.addEventListener('click', ()=>{
   lottoArray = [];
   numPush();
-  console.log('shuffle')
+  console.log('shuffle');
 })
 stopBtn.addEventListener('click',()=>{
   resultBox.style.display = 'block';

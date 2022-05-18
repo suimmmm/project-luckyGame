@@ -5,7 +5,8 @@
           box-sizing: border-box;
 }
 
-ul, li {
+ul, li, a {
+  color: inherit;
   list-style: none;
   text-decoration: none;
 }
@@ -43,9 +44,10 @@ p {
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 
-.m > section {
+#root section {
   margin: 40px auto;
   width: 90%;
 }
@@ -115,4 +117,83 @@ p {
   border: 1px solid;
   width: 450px;
   padding: 10px;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#box {
+  width: 100%;
+  height: 100%;
+}
+
+#side-menu-box {
+  width: 30%;
+  height: 100%;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--color-a);
+}
+
+#side-menu-box > ul {
+  width: 100%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#side-menu-box > ul #logo-box {
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#side-menu-box > ul #logo-box #logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  background-image: url("/img/logo.gif");
+  background-size: contain;
+}
+
+@media (min-width: 850px) {
+  #side-menu-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .m {
+    display: none !important;
+  }
 }

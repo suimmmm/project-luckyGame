@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'B612 Mono', monospace;
 }
 
 ul, li, a {
@@ -76,7 +77,8 @@ p {
 #top > #logo-box #logo {
   width: 40px;
   height: 40px;
-  background-color: var(--color-c);
+  background-image: url("/img/logo.gif");
+  background-size: contain;
   margin: 0 10px;
 }
 

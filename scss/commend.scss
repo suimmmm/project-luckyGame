@@ -1,4 +1,8 @@
-*{margin: 0;padding: 0;box-sizing: border-box;}
+*{margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'B612 Mono', monospace;
+}
 ul, li, a{
   color: inherit;
   list-style: none;
@@ -64,7 +68,9 @@ p{
     #logo{
       width: 40px;
       height: 40px;
-      background-color: var(--color-c);
+      // background-color: var(--color-c);
+      background-image: url('/img/logo.gif');
+      background-size: contain;
       margin: 0 10px;
     }
   }
@@ -73,6 +79,7 @@ p{
     width: 40px;
     height: 40px;
     background-color: var(--color-a);
+
   }
 }
 

@@ -7,15 +7,12 @@
   display: none;
   z-index: 10;
 }
-
 #menu-box #box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-direction: row;
   width: 100%;
   height: 100%;
 }
-
 #menu-box #bg {
   width: 50%;
   height: 100%;
@@ -24,31 +21,19 @@
           backdrop-filter: blur(5px);
   opacity: 0.3;
 }
-
 #menu-box #menu {
   width: 50%;
   height: 100%;
   background-color: var(--color-f);
 }
-
 #menu-box #menu ul {
   width: 100%;
   height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-direction: column;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #menu-box #menu ul li {
   font-size: 16px;
   margin: 40px 0;

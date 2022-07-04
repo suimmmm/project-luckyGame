@@ -88,8 +88,16 @@ p{
   > #hamburger-box{
     width: 40px;
     height: 40px;
-    background-color: var(--color-a);
-
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    
+    > #line{
+      background-color: var(--color-a);
+      width: 100%;
+      height: 20%;
+    }
   }
 }
 
